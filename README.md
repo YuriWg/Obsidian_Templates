@@ -2,6 +2,7 @@
 
 这次单独优化了Dailylog、Weeklylog和Monthlylog文件中日历和打卡部分的视图模版
 [视图文件包](https://github.com/YuriWg/Obsidian_Bujo_Templates/blob/main/bujo_calender_views%20V1.0.zip)
+![资料清单](https://github.com/YuriWg/Obsidian_Bujo_Templates/blob/main/%E6%9B%B4%E6%96%B0%E8%B5%84%E6%96%99%E6%B8%85%E5%8D%95.png)
 
 使用说明详见[使用指南](https://github.com/YuriWg/Obsidian_Bujo_Templates/blob/main/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.pdf)
 
