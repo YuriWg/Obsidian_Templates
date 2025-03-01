@@ -1,8 +1,11 @@
 # Obsidian_Bujo_Templates
 
-这次单独优化了Dailylog、Weeklylog和Monthlylog文件中日历和打卡部分的视图模版，详细说明如下：
-使用说明详见使用指南
-# 更新日志
+这次单独优化了Dailylog、Weeklylog和Monthlylog文件中日历和打卡部分的视图模版
+[视图文件包](https://github.com/YuriWg/Obsidian_Bujo_Templates/blob/main/bujo_calender_views%20V1.0.zip)
+
+使用说明详见[使用指南](https://github.com/YuriWg/Obsidian_Bujo_Templates/blob/main/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.pdf)
+
+# 更新说明
 - 优化系统架构
 - 改进性能表现
 - 增强用户体验
