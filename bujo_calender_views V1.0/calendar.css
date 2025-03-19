@@ -1,0 +1,313 @@
+/* 日历容器样式 */
+.calendar-container {
+  background-color: hsla(var(--interactive-accent-hsl), 0.05);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: left;
+  color: var(--text-normal);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* 周数标题 */
+.calendar-week-title {
+  color: var(--interactive-accent);
+  font-weight: 800;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+/* 分割线 */
+.calendar-divider {
+  height: 1px;
+  background: hsla(var(--interactive-accent-hsl), .1);
+  margin: 0px 20px;
+}
+
+/* 日历网格 */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.2em;
+  padding: 0em 1em;
+}
+
+/* 星期标题 */
+.weekday-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--interactive-accent);
+  padding-top: 1em;
+}
+
+/* 日期单元格基础样式 */
+.date-cell {
+  text-align: center;
+  border-radius: 20px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-muted);
+  margin-left: 0 0.2em;
+  min-width: 2em;
+}
+
+/* 当前日期高亮 */
+.date-cell-current {
+  background-color: var(--interactive-accent);
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 1em 0.8em;
+}
+
+/* 有日记的日期样式 */
+.date-cell-has-note {
+  background-color: hsla(var(--interactive-accent-hsl), 0.3);
+}
+
+/* 引用区块容器 */
+.quote-container {
+  border-top: 1px solid hsla(var(--interactive-accent-hsl), 0.1);
+  margin-top: 0.5em;
+  padding-top: 2em;
+  padding-bottom: 1.2em;
+  font-size: 1em;
+  color: var(--interactive-accent);
+  position: relative;
+  font-weight: bold;
+  line-height: 2;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* 引用图标 */
+.quote-icon {
+  position: absolute;
+  left: 0px;
+  top: -5px;
+  font-size: 24px;
+  color: var(--interactive-accent);
+  opacity: 1;
+}
+
+/* 周视图容器 */
+.week-view-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 1em 0;
+}
+
+.week-view-container .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 2.5em);
+  gap: 0.5em;
+  padding: 1.5em;
+  margin: 0em 1em;
+  justify-content: center;
+}
+
+.week-view-container .date-cell {
+  width: 2.5em;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 0.9em;
+  color: var(--text-normal);
+  margin: 0;
+  padding: 0;
+}
+
+.week-view-container .date-cell.date-cell-current {
+  background-color: var(--interactive-accent);
+  color: white !important;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.week-view-container .date-cell.date-cell-empty {
+  background-color: hsla(var(--interactive-accent-hsl), 0.1);
+  border: 1px solid var(--interactive-accent);
+  color: var(--text-normal);
+}
+
+.week-view-container .date-cell.date-cell-other {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.week-view-container .weekday-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--interactive-accent);
+  padding-top: 0em;
+  padding-bottom: 1em;
+}
+
+/* 月历部分 */
+.month-calendar {
+  flex: 1;
+  background-color: hsla(var(--interactive-accent-hsl), 0.05);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.month-calendar-title {
+  color: var(--interactive-accent);
+  font-weight: 800;
+  font-size: 1.5em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+/* 习惯跟踪部分 */
+.habit-tracker {
+  display: flex;
+  background-color: hsla(var(--interactive-accent-hsl), 0.05);
+  border-radius: 12px;
+  padding: 1.2rem;
+  height: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex: 2;
+  overflow: hidden;
+}
+
+.habit-grid {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) repeat(7, minmax(1.5rem, 1fr));
+  gap: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.habit-day-name {
+  font-weight: bold;
+  color: var(--interactive-accent);
+  font-size: 1.1em;
+  padding: 4px 0;
+}
+
+.habit-name {
+  text-align: left;
+  padding: 4px 8px;
+  font-weight: 500;
+}
+
+.habit-status {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 2px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.habit-status-done {
+  background-color: var(--interactive-accent);
+  box-shadow: 0 2px 6px rgba(var(--interactive-accent-rgb), 0.5);
+}
+
+.habit-status-empty {
+  background-color: hsla(var(--interactive-accent-hsl), 0.1);
+  border: 1.5px dotted hsla(var(--interactive-accent-hsl), 0.8);
+}
+
+.habit-status-mood {
+  background-color: hsla(var(--interactive-accent-hsl), 0.1);
+  border: 1.5px dotted hsla(var(--interactive-accent-hsl), 0.8);
+  font-size: 1.5rem;
+  color: var(--interactive-accent);
+}
+
+/* 月视图专用样式 */
+.month-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1em 0;
+}
+
+/* 年度概览部分 */
+.year-overview {
+  background-color: hsla(var(--interactive-accent-hsl), 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.year-title {
+  color: var(--interactive-accent);
+  font-weight: 800;
+  font-size: 2em;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.year-subtitle {
+  font-size: 0.5em;
+  color: hsla(var(--interactive-accent-hsl), 1);
+}
+
+.months-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0 2px 2px;
+  scrollbar-width: thin;
+}
+
+.month-button {
+  flex: 100%;
+  height: 2rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  font-weight: lighter;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  background: hsla(var(--interactive-accent-hsl), 0.05);
+  border: 1px solid hsla(var(--interactive-accent-hsl), 0.5);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.month-button.current {
+  background: var(--interactive-accent);
+  color: white;
+  transform: scale(1);
+  box-shadow: 0 4px 12px rgba(var(--interactive-accent-rgb), 0.3);
+}
+
+.month-button.has-note {
+  background: hsla(var(--interactive-accent-hsl), 0.2);
+  border-color: var(--interactive-accent);
+}
+
+/* 月度跟踪网格 */
+.month-tracker {
+  display: grid;
+  grid-template-columns: minmax(90px, 1fr) repeat(31, minmax(1.5rem, 1fr)) minmax(50px, 0.5fr);
+  gap: 4px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: hsla(var(--interactive-accent-hsl), 0.05);
+  border-radius: 5px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
